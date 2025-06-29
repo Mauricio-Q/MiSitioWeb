@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Dr. Q Estética: Belleza, Bienestar y Salud en manos expertas. Descubre tratamientos modernos y personalizados en medicina estética.">
+  <meta name="keywords" content="Dr. Q Estética, medicina estética, bótox, ácido hialurónico, mesoterapia, plasma rico en plaquetas, pequeña cirugía, Armenia, bienestar, salud, rejuvenecimiento">
+  <title>Dr. Q Estética | Belleza, Bienestar y Salud</title>
+  <!-- Fuente Raleway -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap" rel="stylesheet">
+  <!-- Iconos Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    :root {
+      --color-base: #007863;
+      --color-acento1: #007863;
+      --color-acento2: #007863;
+      --color-acento3: #007863;
+      --color-acento4: #007863;
+      --color-acento5: #007863;
+      --color-fondo: #f7fdfb;
+      --color-texto: #1a1a1a;
+    }
+    body {
+      font-family: 'Raleway', Arial, sans-serif;
+      margin: 0;
+      background: var(--color-fondo);
+      color: var(--color-texto);
+    }
+    header {
+      background: var(--color-base);
+      color: #fff;
+      padding: 2rem 1rem 1rem 1rem;
+      text-align: center;
+      position: relative;
+    }
+    .logo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+    .logo img {
+      max-height: 100px;
+      border-radius: 50%;
+      background: #fff;
+      padding: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    .slogan {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin: 1.5rem 0 0.5rem 0;
+      color: #fff;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.10);
+      letter-spacing: 1px;
+    }
+    .social-links {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      gap: 18px;
+    }
+    .social-links a {
+      color: #fff;
+      font-size: 1.8rem;
+      transition: color 0.2s;
+    }
+    .social-links a:hover {
+      color: var(--color-acento2);
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+      margin-bottom: 2.5rem;
+    }
+    .service-card {
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.10);
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      border-top: 8px solid;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .service-card:nth-child(1) { border-top-color: var(--color-acento1);}
+    .service-card:nth-child(2) { border-top-color: var(--color-acento2);}
+    .service-card:nth-child(3) { border-top-color: var(--color-acento3);}
+    .service-card:nth-child(4) { border-top-color: var(--color-acento4);}
+    .service-card:nth-child(5) { border-top-color: var(--color-acento5);}
+    .service-card:nth-child(6) { border-top-color: var(--color-acento2);}
+    .service-card:nth-child(7) { border-top-color: var(--color-acento3);}
+    .service-card:hover {
+      transform: translateY(-7px) scale(1.02);
+      box-shadow: 0 6px 24px rgba(0,0,0,0.13);
+    }
+    .service-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      background: #e6f7f1;
+    }
+    .service-card h2 {
+      margin: 0;
+      font-size: 1.22rem;
+      font-weight: 700;
+      padding: 1rem 1rem 0.5rem 1rem;
+      color: var(--color-base);
+    }
+    .service-card p {
+      padding: 0 1rem 1.2rem 1rem;
+      margin: 0;
+      color: #444;
+      font-size: 1rem;
+    }
+    .contact-form {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+      max-width: 500px;
+      margin: 0 auto 2rem auto;
+    }
+    .contact-form h2 {
+      color: var(--color-base);
+      margin-top: 0;
+      margin-bottom: 1.2rem;
+      font-size: 1.3rem;
+      font-weight: 700;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border: 1px solid #d0d0d0;
+      border-radius: 6px;
+      font-family: 'Raleway', Arial, sans-serif;
+      font-size: 1rem;
+      resize: vertical;
+    }
+    .contact-form button {
+      background: var(--color-base);
+      color: #fff;
+      border: none;
+      padding: 0.9rem 2rem;
+      border-radius: 6px;
+      font-size: 1.1rem;
+      font-family: 'Raleway', Arial, sans-serif;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .contact-form button:hover {
+      background: #005f4b;
+    }
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #25d366;
+      color: #fff;
+      padding: 15px 28px;
+      border-radius: 30px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.13);
+      font-size: 1.1rem;
+      font-family: 'Raleway', Arial, sans-serif;
+      font-weight: 700;
+      z-index: 1000;
+      transition: background 0.2s;
+    }
+    .whatsapp-btn:hover {
+      background: #1da851;
+    }
+    .contacto-final {
+      text-align: center;
+      font-size: 1.2rem;
+      margin-bottom: 2.5rem;
+      color: var(--color-base);
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+    @media (max-width: 600px) {
+      .container { padding: 1rem 0.3rem;}
+      .contact-form { padding: 1.2rem;}
+      .services-grid { gap: 1rem;}
+      .service-card img { height: 110px;}
+      .whatsapp-btn { right: 10px; bottom: 10px; padding: 10px 18px; font-size: 1rem;}
+      .social-links { position: static; margin-top: 1rem; justify-content: center;}
+      .slogan { font-size: 1.1rem;}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="social-links">
+      <a href="https://www.facebook.com/mauricio.quintero.vallejo/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.instagram.com/mauricio.quintero.vallejo/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    </div>
+    <div class="logo">
+      <img src="img/logo-mqv.jpg" alt="Logo Dr. Q Estética">
+      <div class="slogan">
+        Dr. Q: Belleza, Bienestar y Salud
+      </div>
+    </div>
+  </header>
+  <div class="container">
+    <div class="services-grid">
+      <div class="service-card">
+        <img src="img/botox.jpg" alt="Bótox">
+        <h2>Bótox para líneas de expresión</h2>
+        <p>Suaviza líneas de expresión y rejuvenece tu rostro con resultados naturales y seguros.</p>
+      </div>
+      <div class="service-card">
+        <img src="img/acido-hialuronico.jpg" alt="Ácido Hialurónico Facial">
+        <h2>Ácido Hialurónico Facial</h2>
+        <p>Rellena y mejora líneas faciales para un aspecto más joven y fresco.</p>
+      </div>
+      <div class="service-card">
+        <img src="img/perfilado-labios.jpg" alt="Perfilado de labios">
+        <h2>Perfilado de labios</h2>
+        <p>Delinea y resalta los labios para un aspecto más atractivo.</p>
+      </div>
+      <div class="service-card">
+        <img src="img/meso-pelo.jpg" alt="Mesoterapia Capilar">
+        <h2>Mesoterapia Capilar</h2>
+        <p>Estimula el crecimiento y detiene la caída del cabello en hombres y mujeres.</p>
+      </div>
+      <div class="service-card">
+        <img src="img/mesoterapia.jpg" alt="Mesoterapia Facial y Corporal">
+        <h2>Mesoterapia Facial y Corporal</h2>
+        <p>Hidratación profunda de la piel, rejuvenecimiento facial y remodelación corporal sin cirugía.</p>
+      </div>
+      <div class="service-card">
+        <img src="img/plasma.jpg" alt="Plasma Rico en Plaquetas">
+        <h2>Plasma Rico en Plaquetas</h2>
+        <p>Regenera tu piel y estimula la producción de colágeno con tu propio plasma.</p>
+      </div>
+      <div class="service-card">
+        <img src="img/vasitos.jpg" alt="Escleroterapia para Vasitos">
+        <h2>Escleroterapia para Vasitos</h2>
+        <p>Elimina pequeñas venas y vasitos en piernas para una piel más uniforme.</p>
+      </div>
+      <div class="service-card">
+        <img src="img/pequena-cirugia.jpg" alt="Pequeña Cirugía Estética">
+        <h2>Pequeña Cirugía Estética</h2>
+        <p>Procedimientos menores para lunares, quistes y corrección estética con mínima invasión.</p>
+      </div><div class="service-card">
+        <img src="img/acne.jpg" alt="Tratamiento del Acné">
+        <h2>Tratamiento del Acné</h2>
+        <p>Tratamiento médico para una piel limpia y sin marcas.</p>
+      </div>
+    </div>
+    <div class="contact-form">
+      <h2>Contáctame</h2>
+      <form action="mailto:drqestetica@gmail.com" method="post" enctype="text/plain">
+        <input type="text" name="nombre" placeholder="Nombre completo" required>
+        <input type="email" name="email" placeholder="Correo electrónico" required>
+        <input type="tel" name="telefono" placeholder="Teléfono">
+        <textarea name="mensaje" rows="4" placeholder="Mensaje" required></textarea>
+        <button type="submit">Enviar Consulta</button>
+      </form>
+    </div>
+    <div class="contacto-final">
+      <i class="fab fa-whatsapp"></i> WhatsApp: 311 358 1196
+    </div>
+  </div>
+  <a href="https://wa.me/573113581196" class="whatsapp-btn" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+    Agenda tu cita
+  </a>
+</body>
+</html>
